@@ -1,0 +1,276 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20px 40px 140px 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "mynav mynav mynav mynav"
+    "menuHead menuHead menuHead menuHead"
+  "content content content content"
+  "footer footer footer footer";
+  height: 100vh; /* на всю страницу по высоте, чтобы футел был последним на стр*/
+  /*border: 1px red solid;*/
+
+}
+
+.header {
+  background-color: rgb(255, 134, 0);
+  grid-area: header;
+  text-align: center;
+}
+
+.header nav {
+  display: grid;
+  font-size: 13px;
+  grid-auto-flow: column;
+  margin-top: 3px;
+}
+
+.header nav a {
+  color: white; /* Цвет текста в блоках меню. */
+  text-decoration: none; /* Устранение подчёркивания ссылок. */
+}
+.header nav a:hover {
+  color: yellowgreen; /* Цвет текста при наведении курсора. */
+}
+
+
+
+.mynav {
+  background-color: rgb(20, 20, 20);
+  grid-area: mynav;
+  border: 1px solid rgb(188, 191, 203);
+  text-align: center;
+  opacity: 0.9;
+}
+
+.mynav nav {
+  display: grid;
+  padding-top: 12px;
+  margin: 0 auto;
+  grid-auto-flow: column;
+  color: white;
+}
+
+.mynav nav a {
+  color: white; /* Цвет текста в блоках меню. */
+  text-decoration: none; /* Устранение подчёркивания ссылок. */
+  position: relative; /* Это необходимо при использовании Internet Explorer 6 для того, чтобы ссылка по всей своей площади была «кликабельной». */
+}
+.mynav nav a:hover {
+  color: yellowgreen; /* Цвет текста при наведении курсора. */
+}
+
+
+
+
+.menuHead{
+  grid-area: menuHead;
+  display: inline-grid; /* !* Отображать как строчный элемент *!*/
+  /*border-radius: 4px;  !*закругленные рамки*!*/
+  /*закругление и тени*/
+  /*background: #fc0;   !*Цвет фона *!*/
+  /*box-shadow: 0 0 10px rgba(0,0,0,0.5); !* Параметры тени *!*/
+  text-align: center;
+  align-items:center;
+  margin: 20px auto;
+}
+
+.menuHead nav img{
+  margin: 5px 0 0 15px;
+  border: 1px solid #1397ff;
+  border-radius: 6px;
+  height: 50px;
+  width: 120px;
+}
+
+
+
+
+/*.logoSite{*/
+/*  grid-area: logoSite;*/
+/*}*/
+
+/*.menuForAll{*/
+/*  grid-area: menuForAll;*/
+/*  background: rgba(8, 4, 0, 0.8); !* Цвет фона *!*/
+/*  text-align: center;*/
+/*  color: #ff2d4d;*/
+/*}*/
+/*.menuForAll nav {*/
+/*  display: grid;*/
+/*  margin: 0 auto;*/
+/*  padding-top: 5px;*/
+/*  grid-auto-flow: column;*/
+/*}*/
+
+
+.content {
+  grid-area: content;
+  margin-top: 20px;
+}
+
+
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "premier seconde troisième"
+    "premier seconde troisième"
+    "premier seconde troisième"
+    "premier seconde troisième"
+;
+  background-color: rgb(0, 0, 0);
+  margin-top: 40px;
+  opacity: 0.8;
+}
+li{
+  list-style-type: none; /* Убираем маркеры */
+  padding-top: 10px;
+  font: 13px "Times New Roman", Times, serif;
+}
+.premier{
+  grid-area: premier;
+  margin: 5px auto;
+}
+.premier li a{
+  padding: 10px 10px;
+  list-style-type: none; /* Убираем маркеры */
+  color: white; /* Цвет текста в блоках меню. */
+  text-decoration: none; /* Устранение подчёркивания ссылок. */
+  position: relative; /* Это необходимо при использовании Internet Explorer 6 для того, чтобы ссылка по всей своей площади была «кликабельной». */
+}
+.premier li a:hover {
+  color: #00a0f8; /* Цвет текста при наведении курсора. */
+}
+
+
+.seconde{
+  grid-area: seconde;
+  margin: 5px auto;
+}
+.seconde li a{
+  padding: 10px 10px;
+  list-style-type: none; /* Убираем маркеры */
+  color: white; /* Цвет текста в блоках меню. */
+  text-decoration: none; /* Устранение подчёркивания ссылок. */
+  position: relative; /* Это необходимо при использовании Internet Explorer 6 для того, чтобы ссылка по всей своей площади была «кликабельной». */
+}
+.seconde li a:hover {
+  color: #00a0f8; /* Цвет текста при наведении курсора. */
+}
+
+.troisième{
+  grid-area: troisième;
+  margin: 5px auto;
+}
+.troisième li a{
+  padding: 5px 5px;
+  list-style-type: none; /* Убираем маркеры */
+  color: white; /* Цвет текста в блоках меню. */
+  text-decoration: none; /* Устранение подчёркивания ссылок. */
+  position: relative; /* Это необходимо при использовании Internet Explorer 6 для того, чтобы ссылка по всей своей площади была «кликабельной». */
+}
+.troisième li a:hover {
+  color: #00a0f8; /* Цвет текста при наведении курсора. */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media only screen and (max-width: 500px ) {*/
+/*  .containerHome {*/
+/*    grid-auto-columns: 1fr;*/
+/*    grid-template-rows: 3fr;*/
+/*    grid-template-areas: "header" "content" "footer";*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (max-width: 600px ) {*/
+/*  .containerHome {*/
+/*    grid-auto-columns: 1fr;*/
+/*    grid-template-rows: 3fr;*/
+/*    grid-template-areas: "header" "content" "footer";*/
+/*  }*/
+/*}*/
+
+
+
+/*           !*!*Эффект наложения*!*!*/
+/*!*!*https://medium.com/@juwain/blend-modes-with-css-grids-3fbe4b10518f*!*!*/
+/*.logoSite {*/
+/*  display: inline-grid;*/
+/*  grid-template-columns: repeat(20, 1fr);*/
+/*  grid-template-rows: repeat(20, 1fr);*/
+/*}*/
+
+/*.brand__img {*/
+/*  grid-column: 1 / -1;*/
+/*  grid-row: 1 / -1;*/
+/*  !*object-fit: cover; !* как будто это фоновое изображение *!*!*/
+/*  !*object-position: center left;*!*/
+/*  width: 100%;*/
+/*  !*height: 100%;*!*/
+/*}*/
+
+
+/*.brand__message {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  grid-column: 15/ -1;*/
+/*  grid-row: 1/ -1;*/
+/*  padding: 1em;*/
+/*  color: white;*/
+/*  background-color: rgba(0, 0, 0, 0.9);*/
+/*}*/
+/*.brand__heading {*/
+/*  font-family: "Megrim", cursive;*/
+/*  margin-bottom: 0;*/
+/*}*/
+/*.brand__text {*/
+/*  margin-top: 0.5em;*/
+/*  text-align: center;*/
+/*}*/
+
+/*.brand::before,*/
+/*.brand::after {*/
+/*  content: "";*/
+/*  mix-blend-mode: hue; !* Режим наложения hue берёт оттенок цвета верхнего слоя(honeydew) и нижнего *!*/
+/*}*/
+/*.brand::before {*/
+/*  z-index: 1;  !*в данном случаи задаем очередность «слоёв» грид-элементов*!*/
+/*  grid-column: 1 / -2;*/
+/*  grid-row: 1 / 11;*/
+/*  background-color: honeydew;*/
+/*}*/
+/*.brand::after {*/
+/*  z-index: 1;*/
+/*  grid-column: 1 / -2;*/
+/*  grid-row: -1 / 11;*/
+/*  background-color: orchid;*/
+/*}*/
+
+
+
+
+
+
+
+

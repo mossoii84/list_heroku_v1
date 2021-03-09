@@ -1,0 +1,39 @@
+
+<!--   Данные из своего массива -->
+<!--<ag-grid-angular-->
+<!--  style="width: 500px; height: 150px;"-->
+<!--  class="ag-theme-alpine"-->
+<!--  [rowData]="rowData"-->
+<!--  [columnDefs]="columnDefs">-->
+<!--</ag-grid-angular>-->
+
+
+
+<!--<div *ngFor="let element of elements">-->
+<!--  <span> {{element.title}}</span>-->
+<!--</div>-->
+
+
+
+<!--   Делаем общий фильтр-->
+<input type="text"
+       [(ngModel)]="searchValue" placeholder="quick filter..."  />
+
+<div class="containerForAgGrid">
+
+<ag-grid-angular
+  class="ag-theme-alpine"
+  [rowData]="rowData | async"
+  [columnDefs]="columnDefs"
+   rowSelection="multiple"
+  [quickFilterText]="searchValue"
+>
+<!--  style="width: auto; height: 100vh;" = это нужно вставить внутри тека ag-grid-angular-->
+</ag-grid-angular>
+
+</div>
+
+
+
+
+

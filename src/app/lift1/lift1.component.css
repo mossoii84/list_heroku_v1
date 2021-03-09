@@ -1,0 +1,167 @@
+.containerForLift {
+  background: #FFFFFF; /*фон страницы*/
+  border: thin black solid;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 20px 50px 30px 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    " menuHead menuHead menuHead menuHead menuHead"
+    " headPage headPage headPage headPage headPage "
+    " menuLift filtre filtre filtre filtre "
+  "menuLift contentLift contentLift contentLift contentLift"
+;
+}
+
+.headPage{
+  border: thin blue solid;
+  text-align: center;
+  grid-area: headPage;
+}
+.menuHead{
+  /*display: inline;  !* Отображать как строчный элемент *!*/
+  background: #1cffd0; /*фон страницы*/
+  border: thin #1cffd0 solid;
+  grid-area: menuHead;
+}
+nav a{
+  display: inline; /* !* Отображать как строчный элемент *!*/
+  padding-left: 10px;
+  margin: 0 auto;
+  color: red;
+}
+
+.menuLift {
+  grid-area: menuLift;
+  border-radius: 4px;
+  border: 1px solid forestgreen;
+}
+li {padding-top: 10px;list-style-type: none;}
+a {text-decoration: none;}
+
+/*фильтр цены и тп*/
+.filtre{
+  grid-area: filtre;
+  border-radius: 2px;
+  border: 1px solid #8b4d4b;
+  text-align: right;
+  padding-right:20px;
+}
+
+
+  /*Содержимое контента*/
+.contentLift {
+  grid-area: contentLift;
+  display: inline-grid;
+  border: 1px red solid;
+  justify-self:center;
+  grid-columns: repeat(4, 1fr);
+  grid-row: auto;
+  grid-gap: 10px;
+  grid-template-areas: "item1 item1 item1 item1";
+}
+
+.item1 img {
+  height: 200px;
+  width: 200px;
+}
+.item1{
+  border: 1px #4168ff solid;
+  
+  text-align: center;
+  padding: 3px;
+}
+.span1{
+  padding: 3px;
+  border: 1px #37ff3f solid;
+  width: 230px;
+}
+
+
+
+
+
+
+
+
+
+/*.headerPedigree {*/
+/*  text-align: center;*/
+/*  grid-area: headerPedigree;*/
+/*}*/
+
+/*.headerPedigree span {*/
+/*  font-size: 12px;*/
+/*  color: blue*/
+/*}*/
+
+/*.haut_container_menu {*/
+/*  border-radius: 12px;*/
+/*  background-color: white;*/
+/*  opacity: .8;*/
+/*  height: 200px;*/
+/*  border: 1px solid forestgreen;*/
+/*  grid-area: haut_container_menu;*/
+/*}*/
+
+/*.haut_container_menu .username {*/
+/*  padding-top: 5px;*/
+/*  text-align: center;*/
+/*  color: deepskyblue;*/
+/*  font-style: italic;*/
+/*}*/
+
+/*ul {*/
+/*  font-size: 15px;*/
+/*  margin-left: -20px;*/
+/*}*/
+
+/*li {*/
+/*  list-style: none; !* Убираем маркеры *!*/
+/*  padding-top: 10px;*/
+/*  text-decoration: none; !* Убираем подчеркивание *!*/
+/*}*/
+
+/*li a {*/
+/*  text-decoration: none; !* Убираем подчеркивание *!*/
+/*}*/
+
+
+/*.bas_container_menu {*/
+/*  border-radius: 12px;*/
+/*  background-color: white;*/
+/*  opacity: .8;*/
+/*  border: 1px solid saddlebrown;*/
+/*  grid-area: bas_container_menu;*/
+/*}*/
+
+/*!*Форма*!*/
+/*.example-container {*/
+/*  margin-top: 10px;*/
+/*  text-align: center;*/
+/*  font-size: 14px;*/
+/*}*/
+
+/*!*площать показа дерева*!*/
+/*.rod {*/
+/*  border: 1px solid black;*/
+/*  border-radius: 12px;*/
+/*  background-color: white;*/
+/*  grid-area: rod;*/
+/*}*/
+
+
+/*.formArbre {*/
+/*  padding-top: 5px;*/
+/*  text-align: center;*/
+/*  font-style: italic;*/
+/*}*/
+
+/*!*@media only screen and (max-width: 500px ) {*!*/
+/*!*  .containerPedigree {*!*/
+/*!*    grid-auto-columns: 1fr;*!*/
+/*!*    grid-template-rows: 6fr;*!*/
+/*!*    grid-template-areas: "headerPedigree" "haut_container_menu" "rod" "bas_container_menu";*!*/
+/*!*  }*!*/
+/*!*}*!*/
+

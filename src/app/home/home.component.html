@@ -1,0 +1,132 @@
+<div class="containerForHome">
+
+  <div class="searchOnsite">
+        <input type="text" class="inputFilter"
+                [(ngModel)]="searchValue" placeholder="Search on site"  />
+  </div>
+
+
+
+
+  <div class="contentHome">
+<!--    Выводим нашу таблицу товаров если клиент не начала поиска-->
+  <div *ngIf="searchValue; then elseBlock else thenBlock"></div>
+  <ng-template #thenBlock>
+    <div  *ngFor="let item of tovarLift; let i = index">
+    <div class="item1" >
+      <div class="verxneemenuRef"><span>ref: {{item.ref}}</span></div>
+      <div class="verxneemenu"><span>{{item.brend}}</span></div>
+              <!--  Наша карусель с фото-->
+          <div class="slides">
+            <div *ngFor="let slide of item.images;let i = index">
+              <img src="{{slide.img }}">
+            </div>
+          </div>
+        <div class="nijneemenu"><span>{{item.discription}}</span></div>
+        <div class="nijneemenuPrice"><span>{{item.price}}</span></div>
+    </div>
+    </div>
+    </ng-template>
+
+      <ng-template #elseBlock >
+        <!--   Делаем общий фильтр-->
+        <ag-grid-angular style="padding-left: 50px"
+          class="ag-theme-alpine"
+          [rowData]="rowData | async"
+          [columnDefs]="columnDefs"
+          rowSelection="multiple"
+          [quickFilterText]="searchValue">
+        </ag-grid-angular>
+      </ng-template>
+
+
+  </div>
+
+
+
+
+
+
+<!--    <div class="slider">-->
+<!--    <div  *ngFor="let item of tovarLift">-->
+
+<!--      <a href="#slide-1">1</a>-->
+<!--      <a href="#slide-2">2</a>-->
+<!--      <a href="#slide-3">3</a>-->
+
+
+<!--        <div class="slides">-->
+<!--          <div *ngFor="let slide of item.images;let i = index">-->
+
+<!--          <div id="slide-1">-->
+<!--        <img src="{{slide.img1 }}">-->
+<!--      </div>-->
+<!--      <div id="slide-2">-->
+<!--        <img src="{{slide.img2 }}">-->
+<!--      </div>-->
+<!--      <div id="slide-3">-->
+<!--        <img src="{{slide.img3 }}">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--          -->
+<!--  </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+
+
+
+
+
+
+</div>
+
+<!--&lt;!&ndash;      Наша карусель с фото&ndash;&gt;-->
+<!--      <mat-carousel-->
+<!--        timings="400ms ease-in"-->
+<!--        [autoplay]="true"-->
+<!--        interval="10000"-->
+<!--        color="warn"-->
+<!--        maxWidth="250px"-->
+<!--        [maintainAspectRatio]="false"-->
+<!--        slideHeight="250px"-->
+<!--        slides="3"-->
+<!--        [loop]="true"-->
+<!--        [hideArrows]="true"-->
+<!--        [hideIndicators]="false"-->
+<!--        [useMouseWheel]="false"-->
+<!--        orientation="ltr"-->
+<!--      >-->
+<!--        <mat-carousel-slide-->
+<!--          #matCarouselSlide-->
+<!--          *ngFor="let slide of item.images;let i = index"-->
+<!--          [image]="slide.img"-->
+<!--          overlayColor="#00000040"-->
+<!--          [hideOverlay]="true"-->
+<!--          [disabled]="false"-->
+<!--        ></mat-carousel-slide>-->
+<!--      </mat-carousel>-->
+
+
+
+
+
+<!--      <div>dernierAchat, крутящиеся квадраты как у руба</div>-->
+    <!--    //тут нужно именно то app откуда мы импортирем [elements] , он работает как inject в php-->
+      <!--    <ng-template #elseBlock>Content to render when condition is false.</ng-template>-->
+<!--      <app-ag-grid-table1 [elements]="listElements"></app-ag-grid-table1>-->
+<!--    </div>-->
+
+
+<!--      <div class="contentHome" *ngIf="listElements==null">-->
+<!--        <div class="item1"  *ngFor="let item of tovarLift">-->
+<!--          <div>-->
+<!--            <img src="{{item.img}}">-->
+<!--            <span>{{item.name}}</span>-->
+<!--            &lt;!&ndash;      <span>{{item.FamilyName}}</span>&ndash;&gt;-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+

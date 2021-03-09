@@ -1,0 +1,120 @@
+<div class="container">
+
+  <div class="header">
+    <nav>
+      <a routerLink="/" routerLinkActive="active">+33 0668690351</a>
+      <a routerLink="/lift1" routerLinkActive="active">ХЗ</a>
+      <a routerLink="/tableTest_Materail" routerLinkActive="active">рейтинг довария звездочки</a>
+    </nav>
+  </div>
+
+
+  <div class="mynav">
+    <nav>
+      <a routerLink="/" routerLinkActive="active">Home</a>
+      <a routerLink="/lift1" routerLinkActive="active">Lift_1</a>
+      <a routerLink="/tableTest_Materail" routerLinkActive="active">tableTest</a>
+      <a routerLink="/ag-grid" routerLinkActive="active"> ag-grid</a>
+      <a routerLink="/ag-grid-filtre" routerLinkActive="active">ag-grid-filtre</a>
+      <a routerLink="/povorotImg" routerLinkActive="active">povorotImg</a>
+
+     <!-- Смена языка-->
+      <div style="width: 94px; margin-top: -3px;">
+        <button (click)="switchLanguage('fr')" style=" background-image:url('../assets/i18n/flagFR.png');
+          width: 24px;height: 24px; border-radius: 4px; border: 1px solid wheat;cursor:pointer;margin-right: 5px;"></button>
+        <button (click)="switchLanguage('gb')" style=" background-image:url('../assets/i18n/flagGB.png');
+          width: 24px;height: 24px; border-radius: 4px; border: 1px solid wheat;cursor:pointer;margin-right: 5px;"></button>
+        <button (click)="switchLanguage('rus')" style=" background-image:url('../assets/i18n/flagRUS.png');
+          width: 24px;height: 24px;border-radius: 4px;border: 1px solid wheat; cursor:pointer"></button>
+      </div>
+
+    </nav>
+  </div>
+
+
+  <!--меню под Загаловком-->
+  <div class="menuHead">
+    <nav>
+      <a href="partenaires.htm"><img src="../../assets/mesimages/logoCompany/Otis"/></a>
+      <a href="partenaires.htm"><img src="../../assets/mesimages/logoCompany/Fermator"/></a>
+      <a href="partenaires.htm"><img src="../../assets/mesimages/logoCompany/Karacharovskii"/></a>
+
+      <a href="partenaires.htm"><img src="../../assets/mesimages/logoCompany/Kone"/></a>
+      <a href="partenaires.htm"><img src="../../assets/mesimages/logoCompany/Kleemann"/></a>
+      <a href="partenaires.htm"><img src="../../assets/mesimages/logoCompany/Mogilevskii"/></a>
+
+      <a href="partenaires.htm"> <img src="../../assets/mesimages/logoCompany/Wittur"/></a>
+      <a href="partenaires.htm"> <img src="../../assets/mesimages/logoCompany/ThyssenKrupp"/></a>
+      <a href="partenaires.htm"> <img src="../../assets/mesimages/logoCompany/Sigma"/></a>
+
+      <a href="partenaires.htm"> <img src="../../assets/mesimages/logoCompany/SHLZ" /></a>
+      <a href="partenaires.htm"><img src="../../assets/mesimages/logoCompany/Sematic"/></a>
+      <a href="partenaires.htm"><img src="../../assets/mesimages/logoCompany/Schindler"/></a>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+
+
+  <div class="footer">
+
+    <div class="premier">
+    <ul >
+      <li><a routerLink="/" routerLinkActive="active">Qui sommes-nous ?</a></li>
+      <li><a routerLink="/" routerLinkActive="active"> Information legales</a></li>
+      <li><a routerLink="/" routerLinkActive="active">Nous rejoindre</a></li>
+      <li><a routerLink="/" routerLinkActive="active">Nous rejoindre</a></li>
+    </ul>
+    </div>
+
+    <div class="seconde">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active">Qui sommes-nous ?</a></li>
+        <li><a routerLink="/" routerLinkActive="active"> Information legales</a></li>
+        <li><a routerLink="/" routerLinkActive="active">Nous rejoindre</a></li>
+        <li><a routerLink="/" routerLinkActive="active">Nous rejoindre</a></li>
+      </ul>
+    </div>
+
+    <div class="troisième">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active">
+          <img src="../assets/mesimages/logoCompany/Fermator" height="30" width="60"/></a>
+        <a routerLink="/" routerLinkActive="active">
+          <img src="../assets/mesimages/logoCompany/Kone" height="30" width="60"/></a></li>
+
+        <li><a routerLink="/" routerLinkActive="active">
+          <img src="../assets/mesimages/logoCompany/Kone" height="30" width="60"/></a>
+        <a routerLink="/" routerLinkActive="active">
+          <img src="../assets/mesimages/logoCompany/Kone" height="30" width="60"/></a></li>
+
+        <li><a routerLink="/" routerLinkActive="active">
+          <img src="../assets/mesimages/logoCompany/Kone" height="30" width="60"/></a>
+          <a routerLink="/" routerLinkActive="active">
+            <img src="../assets/mesimages/logoCompany/Kone" height="30" width="60"/></a></li>
+
+      </ul>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

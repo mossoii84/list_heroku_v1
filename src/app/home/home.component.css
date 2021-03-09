@@ -1,0 +1,170 @@
+.containerForHome {
+  /*background: #FFFFFF; !*фон страницы*!*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 40px repeat(1, 1fr);
+  grid-gap: 10px;
+  margin-top: 40px;
+  grid-template-areas:
+    " . searchOnsite searchOnsite searchOnsite searchOnsite . "
+    ". contentHome contentHome contentHome contentHome ."
+;
+}
+
+        /*фильтр цены и тп*/
+.searchOnsite{
+  grid-area: searchOnsite;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 8px;
+  /*background-image: url("src/assets/mesimages/poisk2.png");*/
+  grid-template-areas:
+    "inputFilter inputFilter inputFilter";
+}
+.searchOnsite input{
+  grid-area: inputFilter;
+  border-radius: 10px;
+  padding-left: 25px;
+  height: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.71);
+    background-image: url("src/assets/mesimages/poisk2.png");
+    background-repeat: no-repeat; /*Убираем повтор изображения*/
+    background-position: right; /*Позиционируем*/
+    outline: none; /*!*убираем стандартную обводку браузера*!*/
+}
+
+
+
+.contentHome{
+  grid-area: contentHome;
+  display: inline-grid;
+  justify-self:center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  grid-template-areas: "item1 item1 item1 item1";
+  /*background-color: #FFFFFF;*/
+  background-image: url("src/assets/mesimages/cover1.jpg");
+  -webkit-background-size: cover; /* растягивает фото на экран */
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  border-radius: 8px;
+  padding: 20px;
+}
+.item1{
+  grid-area: item1;
+  background-color: #ffffff;
+  text-align: center;
+  width: 250px;
+  border-radius: 2px;  /*закругленные рамки*/
+  /*закругление и тени*/
+  box-shadow: 0 0 6px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
+.item1 .verxneemenu{
+  background-color: rgb(255, 134, 0);
+  height: 30px;
+  padding-top: 10px;
+  background-color: #ff6700;
+  font: italic 1.2em "Fira Sans", serif;
+}
+.item1 .verxneemenuRef{
+  background-color: rgb(20, 20, 20);
+  opacity: 0.9;
+    color:white;
+  height: 30px;
+  padding-top: 10px;
+  font:  italic 16px "Fira Sans", serif;
+}
+
+.item1 .nijneemenu{
+  opacity: 0.9;
+  height: 30px;
+  padding-top: 10px;
+  font: italic 11px "Fira Sans", serif;}
+.item1 .nijneemenuPrice{
+  opacity: 0.9;
+  height: 30px;
+  padding-top: 10px;
+  font: bold italic 13px "Fira Sans", serif;
+}
+
+
+.contentHome ag-grid-angular
+{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 1050px;
+}
+
+
+
+
+
+
+
+    /* Сменные - корусель фото */
+.slides img {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 250px;
+  height: 200px;
+}
+
+   /*это двигающаяся линия снизу*/
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 250px;
+  height: 200px;
+  transform-origin: center center;
+  transform: scale(1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*.prozrachnost {*/
+/*  background-color:#000000;*/
+/*  opacity:0.8;*/
+/*  !*filter:alpha(opacity=80);*!*/
+/*  !*-moz-opacity:0.8;*!*/
+/*  z-index:-1;*/
+/*  !*filter:alpha(opacity=80);*!*/
+/*  !*-moz-opacity:0.8;*!*/
+/*  z-index:-1;*/
+/*}*/
